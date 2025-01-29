@@ -1,7 +1,5 @@
 # MALWARE ANALYSIS LAB
 
-<img src="https://imgur.com/a/wJzIVae" />
-
 ## Objective
 [Brief Objective - Remove this afterwards]
 
@@ -100,7 +98,7 @@ From this point forward, all installation steps should be performed within your 
 
 - Select "Pause updates for 7 days"
 
-![2025-01-29 18_09_04-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/53fcb1c8-af78-40b7-ad6b-124884d32508)
+![Image](https://github.com/user-attachments/assets/8af4afb5-2dfa-4973-8888-2c612615b158)
 
   *Ref 8: Windows Update tab*
   
@@ -121,7 +119,6 @@ From this point forward, all installation steps should be performed within your 
  *Set-ExecutionPolicy Unrestricted*
 - When prompted by PowerShell, respond with 'Y' or 'A' to confirm 'Yes to All'.
 
-https://imgur.com/a/wJzIVae
 
 ![2025-01-29 17_49_45-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/cbe00560-c7e3-4a8c-8366-dc4858b1e5d5)
 
