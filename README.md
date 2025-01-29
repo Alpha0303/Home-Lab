@@ -32,7 +32,6 @@ The malware analysis lab is designed to provide a secure and controlled environm
 - Take snapshots before executing any sample
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
 ### 1. Download FLARE VM
 
