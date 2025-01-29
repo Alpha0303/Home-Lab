@@ -1,18 +1,16 @@
 # MALWARE ANALYSIS LAB
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The malware analysis lab is designed to provide a secure and controlled environment for analyzing, reverse-engineering, and understanding malicious software. It enables researchers and security professionals to investigate malware behavior, identify threats, and develop effective countermeasures while minimizing the risk of infection to the host system or network.
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Virtualization & System Administration – Configuring virtual machines, managing snapshots, and setting up isolated environments.
+- PowerShell & Command-Line Proficiency – Using PowerShell and terminal commands for setup, automation, and analysis.
+- Networking & Traffic Analysis – Monitoring and analyzing network traffic for malicious activity.
+- Reverse Engineering – Decompiling and analyzing malware behavior using tools like IDA Pro, Ghidra, and OllyDbg.
+- DSecurity Best Practices – Implementing safety measures to prevent lab infections and accidental data leaks.
 
 ### Requirements
 
@@ -124,4 +122,16 @@ From this point forward, all installation steps should be performed within your 
 
   *Ref 10: Windows PowerShell*
 
-  
+- Run the install.ps1 installation script. You will be prompted to enter the current user's password, which FLARE VM will use to log in after each reboot—expect multiple reboots during installation. You will also be asked if you have taken a snapshot of your machine; consider this a reminder to do so if you haven't already. To proceed, respond with 'Y'.
+
+![Image](https://github.com/user-attachments/assets/adb6473a-4d58-4faf-bf37-bc608cf7b3c5)
+
+ *Ref 11: Windows PowerShell*
+
+- A 'FLARE VM Install Customization' window will appear after a few seconds. Simply select 'OK' to proceed, or customize the settings if you know what you're doing.
+
+![Image](https://github.com/user-attachments/assets/990eaa43-c7ac-40bd-90fd-6e8ec4ae71a3)
+
+ *Ref 12: FLARE VM install customization*
+
+- From this point, you can relax and watch your Malware Analysis lab install. The installation time will vary depending on your internet speed and the resources allocated to your Windows machine.
