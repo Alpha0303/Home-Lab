@@ -1,5 +1,7 @@
 # MALWARE ANALYSIS LAB
 
+<img src="https://imgur.com/a/wJzIVae" />
+
 ## Objective
 [Brief Objective - Remove this afterwards]
 
@@ -41,9 +43,88 @@ drag & drop screenshots here or use imgur and reference them using imgsrc
 - Click here to download FLARE VM from the GitHub Repository
 ![2025-01-29 14_48_03-GitHub - mandiant_flare-vm_ A collection of software installations scripts for W](https://github.com/user-attachments/assets/ccd42f3a-d9ee-49c5-a4a1-67e6e57ac724)
 
+  *Ref 1: FLARE VM Repository*
 
-Every screenshot should have some text explaining what the screenshot is about.
+## Note:
+I strongly recommend using Flare VM within a virtualized environment for malware analysis to protect and isolate your physical device and network from malicious activities
 
-Example below.
+I assume you already know how to set up and configure a virtualized environment. Start by creating a new virtual machine (VM) and performing a fresh installation of Windows. Flare VM is designed for Windows 7 SP1 or newer, so choose a version that best suits your needs (in this guide, I will be using Windows 10 Pro).
 
-*Ref 1: Network Diagram*
+From this point forward, all installation steps should be performed within your VM to ensure a secure and controlled environment.
+
+- At this point, you should take a snapshot of your machine before proceeding.
+
+
+### 2. Disable Windows Defender and Pause windows update:
+
+- Use Windows + R key to open the "Run" terminal
+- Type in "regedit" to open "Registry Editor"
+
+![2025-01-29 16_58_42-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/3af60302-b53a-4f34-bcbd-c34970d1c519)
+
+  *Ref 2: Run Window*
+
+- Navigate to \HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+
+![2025-01-29 17_01_34-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/abc2fa4b-8930-41b1-83af-1d313ff38724)
+
+  *Ref 3: Registry Editor 1*
+
+- Right click on "Windows Defender" then "New" and then "DWORD (32-bit) Value". Rename the value "DisableAntiSpyware"
+
+![2025-01-29 17_03_54-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/e3610395-27c8-407a-86fa-e6c2960ebb36)
+
+  *Ref 4: Registry Editor 2*
+
+![2025-01-29 17_08_18-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/da6a7956-3272-4dbe-aec9-6d5cab7431bd)
+
+  *Ref 5: Registry Editor 3*
+
+- Double click on the "DisableAntiSpyware", a new window will open and on the "value date" change the value for "0" to "1"
+
+![2025-01-29 17_10_28-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/5afe710a-ae16-4d5c-84e4-60d3fc9c77f9)
+
+  *Ref 6: Edit DWORD (32-bit) popup*
+
+- Click "OK" and exit "regedit"
+
+- You can delete the "DisableAntiSpyware" or change it's value from "1" to "0" to reactivate your Windows Defender.
+
+
+- Now we need to disable updates on your machine
+- Press the "windows" button and search for "Check for Updates"
+
+![2025-01-29 18_07_01-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/0a09de2f-0337-4d87-b723-e1ec488cc3b5)
+
+  *Ref 7: Windows tab*
+
+- Select "Pause updates for 7 days"
+
+![2025-01-29 18_09_04-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/53fcb1c8-af78-40b7-ad6b-124884d32508)
+
+  *Ref 8: Windows Update tab*
+  
+- Restart your machine after this.
+
+
+### 3. Install FLARE VM
+
+- Extract the FLARE VM repository you just downloaded to a directory of your choice (mine is on the Desktop).
+- Run PowerShell as an administrator, as elevated privileges are required for installation.
+
+![2025-01-29 15_11_47-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/560afa71-2dc4-42ad-b1b8-dcacb8f9ccaa)
+
+  *Ref 9: Windows tab*
+
+- In PowerShell, navigate to the directory where you extracted the FLARE VM repository.
+- Enable the unrestricted execution policy for PowerShell by running the following command:
+ *Set-ExecutionPolicy Unrestricted*
+- When prompted by PowerShell, respond with 'Y' or 'A' to confirm 'Yes to All'.
+
+https://imgur.com/a/wJzIVae
+
+![2025-01-29 17_49_45-Windows 10 x64-Flare - VMware Workstation](https://github.com/user-attachments/assets/cbe00560-c7e3-4a8c-8366-dc4858b1e5d5)
+
+  *Ref 10: Windows PowerShell*
+
+  
