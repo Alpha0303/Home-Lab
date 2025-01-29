@@ -35,7 +35,7 @@ The malware analysis lab is designed to provide a secure and controlled environm
 
 ### 1. Download FLARE VM
 
-- Click here to download FLARE VM from the GitHub Repository
+- Click <a href="https://github.com/mandiant/flare-vm">here</a> to download FLARE VM from the GitHub Repository
 ![2025-01-29 14_48_03-GitHub - mandiant_flare-vm_ A collection of software installations scripts for W](https://github.com/user-attachments/assets/ccd42f3a-d9ee-49c5-a4a1-67e6e57ac724)
 
   *Ref 1: FLARE VM Repository*
